@@ -1,0 +1,52 @@
+/* /* src/styles/global.css */
+@import "./variables.css"; /* Importa las variables primero */
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--background);
+  color: var(--dark);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Estilos para el botón global (btn) */
+.btn {
+  background: var(--primary); /* Por defecto azul */
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md); /* Utiliza variables de espaciado */
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-shadow: var(--shadow);
+  text-transform: capitalize;
+  flex-shrink: 0;
+  outline: none; /* Quitar outline en focus */
+}
+
+.btn:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  background: var(
+    --primary-dark
+  ); /* Un hover por defecto para el botón principal */
+}
+
+/* Puedes añadir estilos para deshabilitados si tu Button los soporta */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ... cualquier otro estilo global que tengas ... */

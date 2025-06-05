@@ -1,0 +1,285 @@
+comandaDetalleContainer {
+  padding: var(--spacing-xl);
+  font-family: var(--font);
+  background: var(--white);
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.comandaDetalleTitulo {
+  font-size: var(--font-size-xxl);
+  text-align: center;
+  font-weight: 700;
+  color: var(--dark);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color-light);
+}
+
+.comandaDetalleInfo {
+  font-size: var(--font-size-md);
+  color: var(--secondary-dark);
+  line-height: 1.6;
+  padding-left: var(--spacing-lg); /* Añade espacio a la izquierda */
+}
+
+.detallesTitulo {
+  font-size: var(--font-size-xl);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  color: var(--dark);
+  border-left: 5px solid var(--primary);
+  padding-left: var(--spacing-md);
+  margin-left: -1px;
+}
+
+.detallesLista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.detalleItem {
+  background: var(--light);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detalleItem:hover {
+  background-color: var(--highlight);
+  border-color: var(--highlight-border);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.detalleInfo {
+  font-size: var(--font-size-md);
+  color: var(--dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.detalleInfo span {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.totalesBox {
+  background-color: var(--background);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  text-align: right;
+}
+
+.totalesBox .detalleInfo {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--dark);
+}
+
+.totalesBox .detalleInfo:last-child {
+  font-size: var(--font-size-xl);
+  color: var(--primary);
+  font-weight: 700;
+  padding-top: var(--spacing-sm);
+  border-top: 1px dashed var(--border-color);
+}
+
+.accionesContainer {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color-light);
+}
+
+.button {
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    transform 0.15s ease-in-out;
+  box-shadow: var(--shadow);
+  text-transform: capitalize;
+  flex-shrink: 0;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--secondary);
+  box-shadow: none;
+  transform: none;
+}
+
+.dashboardButton {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+.dashboardButton:hover {
+  background-color: var(--secondary-dark);
+}
+
+.editarButton {
+  background-color: var(--warning);
+  color: var(--dark);
+}
+.editarButton:hover {
+  background-color: var(--warning-dark);
+}
+
+.pagarButton {
+  background-color: var(--success);
+  color: var(--white);
+}
+.pagarButton:hover {
+  background-color: var(--success-dark);
+}
+
+.borrarButton {
+  background-color: var(--danger);
+  color: var(--white);
+}
+.borrarButton:hover {
+  background-color: var(--danger-dark);
+}
+
+.message {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+  font-size: var(--font-size-md);
+  border-width: 1px;
+  border-style: solid;
+  width: 100%;
+  box-sizing: border-box;
+}
+.success {
+  color: var(--success-dark);
+  background: var(--success-light);
+  border-color: var(--success);
+}
+.error {
+  color: var(--danger-dark);
+  background: var(--danger-light);
+  border-color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .comandaDetalleContainer {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) auto;
+    gap: var(--spacing-md);
+  }
+
+  .comandaDetalleTitulo {
+    font-size: var(--font-size-xl);
+  }
+
+  .detallesTitulo {
+    font-size: var(--font-size-lg);
+    margin-top: var(--spacing-md);
+  }
+
+  .detallesLista {
+    grid-template-columns: 1fr;
+  }
+
+  .detalleItem {
+    padding: var(--spacing-md);
+  }
+
+  .totalesBox {
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+  }
+
+  .totalesBox .detalleInfo:last-child {
+    font-size: var(--font-size-lg);
+  }
+
+  .accionesContainer {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: var(--spacing-lg);
+  }
+
+  .button {
+    min-width: unset;
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .comandaDetalleContainer {
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) auto;
+    border-radius: var(--radius);
+  }
+
+  .comandaDetalleTitulo {
+    font-size: var(--font-size-lg);
+    padding-bottom: var(--spacing-xs);
+  }
+
+  .detallesTitulo {
+    font-size: var(--font-size-md);
+    padding-left: var(--spacing-sm);
+    border-left-width: 3px;
+  }
+
+  .detalleItem {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+
+  .totalesBox {
+    padding: var(--spacing-md);
+  }
+
+  .totalesBox .detalleInfo {
+    font-size: var(--font-size-md);
+  }
+
+  .totalesBox .detalleInfo:last-child {
+    font-size: var(--font-size-md);
+  }
+}

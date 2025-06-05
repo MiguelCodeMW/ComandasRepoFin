@@ -1,0 +1,190 @@
+.container {
+  padding: var(--spacing-lg);
+  font-family: var(--font);
+  background: var(--background);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0;
+}
+
+.userInfoContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.userInfo {
+  font-size: var(--font-size-md);
+  color: var(--secondary-dark);
+  font-weight: 500;
+}
+
+.adminButtonsContainer,
+.comandaActionButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.headerButton {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-shadow: var(--shadow);
+  text-transform: capitalize;
+  flex-shrink: 0;
+}
+.headerButton:hover {
+  background-color: var(--primary-dark);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.logoutButton {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-shadow: var(--shadow);
+  text-transform: capitalize;
+}
+.logoutButton:hover {
+  background-color: var(--secondary-dark);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.listTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  text-align: left;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: var(--spacing-sm);
+  width: fit-content;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+  padding: 0;
+  margin: var(--spacing-lg) 0 0 0;
+  list-style: none;
+}
+
+.item {
+  cursor: pointer;
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s, border-left-color 0.2s;
+  border-left: 6px solid transparent;
+}
+.item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.item.abierta {
+  border-left-color: var(--warning);
+}
+.item.cerrada {
+  border-left-color: var(--success);
+}
+
+.itemTitle {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.itemText {
+  margin: var(--spacing-sm) 0;
+  color: var(--secondary-dark);
+  font-size: var(--font-size-md);
+}
+
+.message {
+  grid-column: 1 / -1;
+  padding: var(--spacing-lg);
+  text-align: center;
+  font-size: var(--font-size-md);
+  color: var(--secondary-dark);
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-color);
+  margin-top: var(--spacing-lg);
+  font-style: normal;
+}
+
+.alert {
+  padding: var(--spacing-md);
+  background-color: var(--warning-light);
+  color: var(--warning-dark);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+  text-align: center;
+}
+
+.inlineError {
+  color: var(--danger);
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  margin-top: var(--spacing-md);
+}
+
+.adminSectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.comandaActionButtonsContainer {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settingsButton {
+  align-self: flex-start;
+}
